@@ -703,7 +703,7 @@ right: 2%;
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
+    width: 100%; Ы
 }
 .col-md-8 ftr2-bottom {
   margin: 0px; 
@@ -1582,3 +1582,5 @@ a.more {
   font-size: 0.85em;
   line-height:1.3em;
 }
+
+
