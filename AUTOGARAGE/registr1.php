@@ -71,11 +71,11 @@
         $registerquery = mysql_query("INSERT INTO users (Surname, Name, Lastname, addres, phone, Username, Password, Email) VALUES('".$surname."', '".$name."', '".$lastname."', '".$addres."', '".$phone."', '".$username."', '".$password."', '".$email."')");  
         if($registerquery)  
         {  
-            echo "<center><img src='images/reg.jpg' alt='img01'/></center>";  
+            echo "<center><p class='login'>Спасибо за регистрацию! Ваша учетная запись создана</p></center>";  
         }  
         else  
         {  
-        echo "<a href=\"registr1.php\"><center><img src='images/cor.jpg' alt='img01'/></center></a>";     
+        echo "<a href=\"registr1.php\"><center><p class='login'>Данные введены не коректно, попробуйте снова</p></center></a>";     
         }         
      }  
 }  

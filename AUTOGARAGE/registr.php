@@ -72,11 +72,11 @@
      		
 		if($registerquery)  
         {    
-            echo "<a href=\"autoriz.php\"><center><img src='images/reg.jpg' alt='img01'/></center></a>";  
+            echo "<a href=\"autoriz.php\"><center><p class='login'>Спасибо за регистрацию! Ваша учетная запись создана</p></center></a>";  
         }  
         else  
         {  
-        echo "<a href=\"registr.php\"><center><img src='images/cor.jpg' alt='img01'/></center></a>";       
+        echo "<a href=\"registr.php\"><center><p class='login'>Данные введены не верно! Попробуйте снова</p></center></a>";       
         }         
      }  
 }  

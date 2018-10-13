@@ -67,11 +67,11 @@
         $query = mysqli_query($conn, "INSERT INTO zapis (name, garaj, datetime, time) VALUES('".$name."', '".$garaj."', '".$datetime."', '".$time."')");  
         if($query)  
         {  
-            echo "<center><img src='images/polz.jpg' alt='img01'/></center>";  
+            echo "<center><p class='login'>Спасибо за пользование нашим сервисом!</p></center>";  
           }  
         else  
         {  
-        echo "<a href=\"admin.php\"><center><img src='images/cor.jpg' alt='img01'/></center></a>";       
+        echo "<a href=\"admin.php\"><center><p class='login'>Данные введины не коректно! Попробуйте снова</p></center></a>";       
         }         
      }  
 }  
@@ -118,7 +118,7 @@ else
 }  ?>
 </div>
 
-<div class="footer2">	
+<div class="footer1">	
 	 	      <div class="col-md-8 ftr2-bottom">		
 			<p>Все права защищены &copy<?php echo date("Y") ?>.  Копирование материалов допускается только с указанием активной ссылки на сайт <a href="index.php">AUTO GARAGE</a></p>
 	 </div>

@@ -49,8 +49,8 @@
 
 <div class="container">
 <br>
-<h1 align="center"> Вы зашли под логином АДМИНИСТРАТОРА! </h1><br>
-<img src="images/123.jpg" alt="img01"/>
+<center><h1 class='login'> Вы зашли под логином АДМИНИСТРАТОРА! </h1></center><br>
+
 </div>
   <div class="clearfix"></div>
 		 </div>

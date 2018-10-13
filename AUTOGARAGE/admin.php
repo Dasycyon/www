@@ -71,12 +71,12 @@ elseif(!empty($_POST['username']) && !empty($_POST['password']))
         $_SESSION['EmailAddress'] = $email;  
         $_SESSION['LoggedIn'] = 1;  
  
-        echo "<center><img src='images/112.jpg' alt='img01'/></center><br><br>";  
-        echo "<meta http-equiv='refresh' content='1;indexadmin.php'>";  
+        echo "<center><p class='login'>Все данные введены верно</p></center><br><br>";  
+        echo "<meta http-equiv='refresh' content='2;indexadmin.php'>";  
     }  
     else  
     {  
-        echo "<a href=\"admin.php\"><center><img src='images/cor.jpg' alt='img01'/></center></a>";  
+        echo "<a href=\"admin.php\"><center><p class='login'>Данные введины не коректно! Попробуйте снова</p></center></a>";  
     } 
 }  
 else  

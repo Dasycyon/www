@@ -69,11 +69,11 @@
         $query = mysql_query("INSERT INTO zapis (name, garaj, datetime, time) VALUES('".$name."', '".$garaj."', '".$datetime."', '".$time."')");  
         if($query)  
         {  
-            echo "<center><img src='images/polz.jpg' alt='img01'/></center>";  
+            echo "<center><p class='login'>Спасибо за пользование нашим сайтом!</p></center>";  
           }  
         else  
         {  
-        echo "<a href=\"admzapis.php\"><center><img src='images/cor.jpg' alt='img01'/></center></a>";        
+        echo "<a href=\"admzapis.php\"><center><p class='login'>Данные введины не коректно! Попробуйте снова</p></center></a>";        
         }         
      }  
 }  
