@@ -92,7 +92,7 @@ while ($myrow =mysqli_fetch_array($result));
 <br><center><button href="javascript://" onclick="print();" class="but2">Печать</button></center><br>
   <div class="clearfix"></div>
 
-		<div class="footer2">	
+		<div class="footer1">	
 	 	      <div class="col-md-8 ftr2-bottom">		
 			<p>Все права защищены &copy<?php echo date("Y") ?>.  Копирование материалов допускается только с указанием активной ссылки на сайт <a href="index.php">AUTO GARAGE</a></p>
 	 </div>
