@@ -47,7 +47,7 @@
 
 <div class="container">
   <?php
-    if(!empty($_POST['Surname']) && !empty($_POST['Name']) && !empty($_POST['Lastname']) && !empty($_POST['addres']) && !empty($_POST['phone'])&& !empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['password']) && !empty($_POST['email']) )
+ if(!empty($_POST['Surname']) && !empty($_POST['Name']) && !empty($_POST['Lastname']) && !empty($_POST['addres']) && !empty($_POST['phone'])&& !empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['password']) && !empty($_POST['email']) )
     {  
     // позволим пользователю зарегистрироваться
 	$surname = mysqli_real_escape_string($conn, $_POST['Surname']); 
@@ -58,8 +58,8 @@
 	$username = mysqli_real_escape_string($conn, $_POST['username']);  
     $password = md5(mysqli_real_escape_string($conn, $_POST['password'])); 
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
-     
-     $checkusername = mysqli_query($conn, "SELECT * FROM users WHERE Username = '".$username."'");  
+
+    $checkusername = mysqli_query($conn, "SELECT * FROM users WHERE Username = '".$username."'");  
  
      if(mysqli_num_rows($checkusername) == 1)  
      {  
@@ -90,12 +90,12 @@ else
 
     <form method="post" action="registr.php" name="registerform" id="registerform" align="center">  
     <fieldset>  
-		<label for="Surname">&nbsp;Фамилия:*&nbsp;&nbsp;</label><input type="text" name="Surname" id="Surname" placeholder="Фамилия"><br> 
-	    <label for="Name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Имя:*&nbsp;&nbsp;</label><input type="text" name="Name" id="Name" placeholder="Имя"> <br>
-		<label for="Lastname">&nbsp;&nbsp;Отчество:*&nbsp;&nbsp;</label><input type="text" name="Lastname" id="Lastname" placeholder="Отчество"> <br>
-		<label for="addres">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Адрес:*&nbsp;&nbsp;</label><input type="text" name="addres" id="addres" placeholder="Адрес"> <br>
-		<label for="phone">&nbsp;&nbsp;&nbsp;Телефон:*&nbsp;&nbsp;</label><input type="text" name="phone" id="phone" placeholder="Контактный номер"> <br>
-		<label for="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:*&nbsp;&nbsp;</label><input type="text" name="email" id="email" placeholder="Email"> <br>
+		<label for="Surname">&nbsp;Фамилия:*&nbsp;&nbsp;</label><input type="text" onkeyup="return proverka(this)" name="Surname" id="Surname" placeholder="Фамилия"><br> 
+	    <label for="Name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Имя:*&nbsp;&nbsp;</label><input type="text" onkeyup="return proverka(this)" name="Name" id="Name" placeholder="Имя"> <br>
+		<label for="Lastname">&nbsp;&nbsp;Отчество:*&nbsp;&nbsp;</label><input type="text" onkeyup="return proverka(this)" name="Lastname" id="Lastname" placeholder="Отчество"> <br>
+		<label for="addres">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Адрес:*&nbsp;&nbsp;</label><input type="text" onkeyup="return proverka1(this)" name="addres" id="addres" placeholder="Адрес"> <br>
+		<label for="phone">&nbsp;&nbsp;&nbsp;Телефон:*&nbsp;&nbsp;</label><input type="text" onkeyup="return proverka(this)" name="phone" id="phone" placeholder="Контактный номер"> <br>
+		<label for="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:*&nbsp;&nbsp;</label><input type="text" onkeyup="return proverka1(this)" name="email" id="email" placeholder="Email"> <br>
         <label for="username">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Логин:*&nbsp;&nbsp;</label><input type="text" onkeyup="return proverka(this)" name="username" id="username" placeholder="Логин"><br>  
         <label for="password">&nbsp;&nbsp;&nbsp;&nbsp;Пароль:*&nbsp;&nbsp;</label><input type="password" onkeyup="return proverka(this)" name="password" id="password" placeholder="Пароль"><br>  <br>  
         <input type="submit" name="register" id="register" value="Зарегистрироваться">  
@@ -103,9 +103,17 @@ else
  <script type="text/javascript"> 
 function proverka(input) { 
     var value = input.value; 
-    var rep = /[-\+\*\ \!\@\#\$\=\%\^\&\(\<\)\>\?\.\,\~\№\;":']/; 
+    var rep = /[-\+\*\ \!\@\#\$\=\%\^\&\(\<\)\>\?\.\,\~\№\;\"\:\']/; 
     if (rep.test(value)) { 
         value = value.replace(rep, ''); 
+        input.value = value; 
+    } 
+} 
+function proverka1(input) { 
+    var value = input.value; 
+    var rep1 = /[+\*\ \!\#\$\=\%\^\&\>\?\~\;\"\:\']/; 
+    if (rep1.test(value)) { 
+        value = value.replace(rep1, ''); 
         input.value = value; 
     } 
 } 
