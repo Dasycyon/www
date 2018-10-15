@@ -4005,7 +4005,7 @@ button.close {
 
 
 .but{ 
-  color: #FF8C00; 
+  color: #000000; 
   background-color: #D6D6D6; 
   border-color: #000000; 
   display: inline-block; 
@@ -4015,7 +4015,7 @@ button.close {
 	text-transform: uppercase;
 	text-shadow: 0 .043em rgba(0,0,0,.3);
      cursor: pointer;
-	font: bold 1.5rem sans-serif;
+	font: 20px sans-serif;
 	height:120px;
 } 
  
@@ -4024,8 +4024,8 @@ button.close {
 .but:active, 
 .but.active, 
 .open .dropdown-toggle.but { 
-  color: #FF8C00; 
-  background-color: #C76B2E; 
+  color: #000000; 
+  background-color: #535151; 
   border-color: #000000; 
 } 
  
@@ -4056,11 +4056,11 @@ fieldset[disabled] .but.active {
  
 .but .badge { 
   color: #D6D6D6; 
-  background-color: #FF8C00; 
+  background-color: #000000; 
 }
 
 .but2{ 
-  color: #FF8C00; 
+  color: #000000; 
   background-color: #D6D6D6; 
   border-color: #000000; 
   display: inline-block; 
@@ -4070,7 +4070,7 @@ fieldset[disabled] .but.active {
 	text-transform: uppercase;
 	text-shadow: 0 .043em rgba(0,0,0,.3);
      cursor: pointer;
-	font: bold 1.5rem sans-serif;
+     font: 14px sans-serif;
 	height:50px;
 } 
  
@@ -4079,8 +4079,8 @@ fieldset[disabled] .but.active {
 .but2:active, 
 .but2.active, 
 .open .dropdown-toggle.but { 
-  color: #FF8C00; 
-  background-color: #C76B2E; 
+  color: #000000; 
+  background-color: #535151; 
   border-color: #000000; 
 } 
  
@@ -4106,12 +4106,12 @@ fieldset[disabled] .but:active,
 .but2[disabled].active, 
 fieldset[disabled] .but.active { 
   background-color: #D6D6D6; 
-  border-color: #000000; 
+  border-color: #535151; 
 } 
  
 .but2 .badge { 
   color: #D6D6D6; 
-  background-color: #FF8C00; 
+  background-color:#535151; 
 }
 
 .table {
